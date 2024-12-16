@@ -54,19 +54,6 @@
             margin-bottom: 15px;
             border-bottom: 2px solid #ddd;
             padding-bottom: 10px;
-            cursor: pointer;
-            display: flex;
-            align-items: center;
-        }
-        h2::after {
-            content: "\25BC";
-            font-size: 0.8em;
-            margin-left: 10px;
-            color: #666;
-            transition: transform 0.3s;
-        }
-        .expanded h2::after {
-            transform: rotate(180deg);
         }
         ul {
             list-style-type: none;
@@ -79,7 +66,7 @@
             position: relative;
         }
         ul li:before {
-            content: "\2022";
+            content: "•";
             color: #1a73e8;
             font-weight: bold;
             position: absolute;
@@ -100,22 +87,13 @@
             background-color: #333;
             color: #fff;
         }
-        .content {
-            display: none;
-        }
-        .expanded .content {
-            display: block;
-        }
-        .about-content {
-            display: block !important;
+        /* About section styles */
+        .about-text {
+            font-size: 1.1em;
+            line-height: 1.8;
+            margin-bottom: 20px;
         }
     </style>
-    <script>
-        function toggleSection(event) {
-            const section = event.target.closest('section');
-            section.classList.toggle('expanded');
-        }
-    </script>
 </head>
 <body>
 
@@ -131,126 +109,115 @@
         <!-- About Section -->
         <section>
             <h2>About Me</h2>
-            <div class="content about-content">
-                <p class="about-text">
-                    I am currently pursuing a B.S. in Data Science & Mathematics at the University of Michigan, with a background in Financial Engineering - Quantitative Finance from The Chinese University of Hong Kong, Shenzhen. My research interests include machine learning and optimization.
-                </p>
-            </div>
+            <p class="about-text">
+                I am currently pursuing a B.S. in Data Science & Mathematics at the University of Michigan, with a background in Financial Engineering - Quantitative Finance from The Chinese University of Hong Kong, Shenzhen. My research interests include machine learning and optimization.
+            </p>
         </section>
 
         <!-- Education Section -->
         <section>
-            <h2 onclick="toggleSection(event)">Education</h2>
-            <div class="content">
-                <h3>University of Michigan, Ann Arbor</h3>
-                <p><strong>Junior (From Aug 2024)</strong></p>
-                <p><strong>Program:</strong> B.S. in Data Science & Mathematical Sciences - Probabilistic Methods</p>
+            <h2>Education</h2>
+            <h3>University of Michigan, Ann Arbor</h3>
+            <p><strong>Junior (From Aug 2024)</strong></p>
+            <p><strong>Program:</strong> B.S. in Data Science & Mathematical Sciences - Probabilistic Methods</p>
 
-                <h3>The Chinese University of Hong Kong, Shenzhen</h3>
-                <p><strong>September 2022 - July 2024</strong></p>
-                <p><strong>Program:</strong> Financial Engineering - Quantitative Finance</p>
-                <p><strong>GPA:</strong> 3.6 (Top 20%, 2022-2024 Dean's List)</p>
-                <p><strong>Core Coursework:</strong> C/C++ Programming, Database Systems, Data Structures, Stochastic Processes, Ordinary Differential Equations, Optimization, Discrete Mathematics, Probability and Statistics</p>
-            </div>
+            <h3>The Chinese University of Hong Kong, Shenzhen</h3>
+            <p><strong>September 2022 - July 2024</strong></p>
+            <p><strong>Program:</strong> Financial Engineering - Quantitative Finance</p>
+            <p><strong>GPA:</strong> 3.6 (Top 20%, 2022-2024 Dean's List)</p>
+            <p><strong>Core Coursework:</strong> C/C++ Programming, Database Systems, Data Structures, Stochastic Processes, Ordinary Differential Equations, Optimization, Discrete Mathematics, Probability and Statistics</p>
         </section>
 
         <!-- Research Section -->
         <section>
-            <h2 onclick="toggleSection(event)">Research Projects</h2>
-            <div class="content">
-                <h3>Federated Unlearning with Gradient Descent and Conflict Mitigation</h3>
-                <p>Zibin Pan, Zhichao Wang, Chi Li, <b>Kaiyan Zheng</b>, Boqi Wang, Xiaoying Tang, Junhua Zhao.</p>
-                <p>Research Paper Accepted by AAAI 2025, May. 2024 to Aug. 2024</p>
-                <p>
-                    Supervised by 
-                    <a href="https://scholar.google.com/citations?user=M2oDRWEAAAAJ&hl=en" target="_blank">Prof. Junhua Zhao</a>, 
-                    Laboratory of Energy Internet
-                </p>
-                <p>Our proposed FedOSD introduces an unlearning cross entropy loss and calculates an orthogonal steepest descent direction, improving unlearning efficiency and maintaining model utility, which is verified by extensive experiments.</p>
-                <a href="Federated Unlearning with Gradient Descent and Conflict Mitigation.pdf" download>Download Paper</a>
+            <h2>Research Projects</h2>
+            <h3>Federated Unlearning with Gradient Descent and Conflict Mitigation</h3>
+            <p>Zibin Pan, Zhichao Wang, Chi Li, <b>Kaiyan Zheng</b>, Boqi Wang, Xiaoying Tang, Junhua Zhao.</p>
+            <p>Research Paper Accepted by AAAI 2025, May. 2024 to Aug. 2024</p>
+            <p>
+                Supervised by 
+                <a href="https://scholar.google.com/citations?user=M2oDRWEAAAAJ&hl=en" target="_blank">Prof. Junhua Zhao</a>, 
+                Laboratory of Energy Internet
+            </p>
+            
+            <p>Our proposed FedOSD introduces an unlearning cross entropy loss and calculates an orthogonal steepest descent direction, improving unlearning efficiency and maintaining model utility, which is verified by extensive experiments.</p>
+            <a href="Federated Unlearning with Gradient Descent and Conflict Mitigation.pdf" download>Download Paper</a></p>
 
-                <h3>Machine Learning Meets Micro-robotics</h3>
-                <p><strong>With Jiachun Zheng et al.</strong></p>
-                <p>Research Review (To be Submitted), Oct. 2023 </p>
-                <p>
-                    Supervised by 
-                    <a href="https://scholar.google.com/citations?hl=en&user=deJNhn4AAAAJ" target="_blank">Prof. Zhuoran Zhang</a>, 
-                    Medical Micro-Robotics Laboratory
-                </p>
-                <p>Discussed recent innovations in learning-based micro-robots, especially in the medical robotics field. Responsible for the planning section in the review.</p>
-            </div>
+            <h3>Machine Learning Meets Micro-robotics</h3>
+            <p><strong>With Jiachun Zheng et al.</strong></p>
+            <p>Research Review (To be Submitted), Oct. 2023 </p>
+            <p>
+                Supervised by 
+                <a href="https://scholar.google.com/citations?hl=en&user=deJNhn4AAAAJ" target="_blank">Prof. Zhuoran Zhang</a>, 
+                Medical Micro-Robotics Laboratory
+            </p>            
+            <p>Discussed recent innovations in learning-based micro-robots, especially in the medical robotics field. Responsible for the planning section in the review.</p>
         </section>
 
         <!-- Awards Section -->
         <section>
-            <h2 onclick="toggleSection(event)">Awards</h2>
-            <div class="content">
-                <ul>
-                    <li>CUHK(SZ) Bowen Scholarship (2022-2024)</li>
-                    <li>CUHK(SZ) Dean's List (2022-2024)</li>
-                    <li>Second Prize, China Undergraduate Mathematical Contest in Modeling (2023)</li>
-                    <li>First Prize, China National High School Biology Olympiad (2021)</li>
-                </ul>
-            </div>
+            <h2>Awards</h2>
+            <ul>
+                <li>CUHK(SZ) Bowen Scholarship (2022-2024)</li>
+                <li>CUHK(SZ) Dean's List (2022-2024)</li>
+                <li>Second Prize, China Undergraduate Mathematical Contest in Modeling (2023)</li>
+                <li>First Prize, China National High School Biology Olympiad (2021)</li>
+            </ul>
         </section>
 
         <!-- Teaching Section -->
         <section>
-            <h2 onclick="toggleSection(event)">Academic Experience</h2>
-            <div class="content">
-                <h3>Undergraduate Student Teaching Fellow (CSC1001), CUHK(SZ)</h3>
-                <p><strong>Sept. 2023 - Dec. 2023</strong></p>
-                <p>Introduction to Computer Science: Programming Methodology (Python). Engaged in homework grading design for 1000+ students. Held weekly labs and answered questions for students online and offline.</p>
+            <h2>Academic Experience</h2>
+            <h3>Undergraduate Student Teaching Fellow (CSC1001), CUHK(SZ)</h3>
+            <p><strong>Sept. 2023 - Dec. 2023</strong></p>
+            <p>Introduction to Computer Science: Programming Methodology (Python). Engaged in homework grading design for 1000+ students. Held weekly labs and answered questions for students online and offline.</p>
 
-                <h3>Academic Mentor and Coordinator, CUHK(SZ) Future Freshman Winter Camp</h3>
-                <p><strong>Feb. 2024</strong></p>
-                <p>Conducted lectures to 250+ students on Introductory Machine Learning. Planned and managed the lecture schedule and materials.</p>
-            </div>
+            <h3>Academic Mentor and Coordinator, CUHK(SZ) Future Freshman Winter Camp</h3>
+            <p><strong>Feb. 2024</strong></p>
+            <p>Conducted lectures to 250+ students on Introductory Machine Learning. Planned and managed the lecture schedule and materials.</p>
         </section>
 
         <!-- Course Projects Section -->
         <section>
-            <h2 onclick="toggleSection(event)">Course Projects</h2>
-            <div class="content">
-                <h3>Student Information System (SIS) Redesign - CSC3170 (Database Systems) at CUHKSZ</h3>
-                <p>
-                    Coordinated a cross-functional team to design and implement an advanced SIS, addressing inefficiencies in academic management systems.
-                </p>
-                <p>
-                    Contributed to the integration of pre-trained Large Language Models (LLMs) for personalized course recommendations and we also implemented Zero-Shot Text-to-Speech (TTS) models to enhance accessibility for visually impaired users.
-                </p>
-                <p>
-                    Contributed to core system functionalities, including course search, selection, arrangement, and personalized assistance.
-                </p>
-                <p>
-                    <a href="https://github.com/HuRuilizhen/CSC3170-Project" target="_blank">View Project on GitHub</a>
-                </p>
+            <h2>Course Projects</h2>
 
-                <h3>Population Projections Using Machine Learning - DATASCI 306 (Statitical Programming) at UMich</h3>
-                <p>
-                    Led a team of five for a comprehensive statistical analysis and forecasting project using R, addressing global population trends using the UN World Population Prospects dataset. Coordinated project tasks and wrapped up deliverables. 
-                <p>
-                    Conducted data cleaning and exploratory data analysis (EDA). Implemented a <strong>Prophet machine learning model</strong> with consideration of external regressors to forecast population dynamics through 2100. Developed comparisons with experiments.
-                <p>
-                    Contributed to creating <strong>interactive visualizations via Shiny app</strong>.
-                </p>
-                <p>
-                    Final Grade: 26/25 (With 1 extra credit) This project was selected as one of the three excellent group projects out of around 50 groups.
-                </p>
-                <p>
-                    <a href="https://github.com/KatherynZheng/datasci306-final_project" target="_blank">View Project on GitHub</a>
-                </p>
-            </div>
+            <h3>Student Information System (SIS) Redesign - CSC3170 (Database Systems) at CUHKSZ</h3>
+            <p>
+                Coordinated a cross-functional team to design and implement an advanced SIS, addressing inefficiencies in academic management systems.
+            </p>
+            <p>
+                Contributed to the integration of pre-trained Large Language Models (LLMs) for personalized course recommendations and we also implemented Zero-Shot Text-to-Speech (TTS) models to enhance accessibility for visually impaired users.
+            </p>
+            <p>
+                Contributed to core system functionalities, including course search, selection, arrangement, and personalized assistance.
+            </p>
+            <p>
+                <a href="https://github.com/HuRuilizhen/CSC3170-Project" target="_blank">View Project on GitHub</a>
+            </p>
+
+            <h3>Population Projections Using Machine Learning - DATASCI 306 (Statitical Programming) at UMich</h3>
+            <p>
+                Led a team of five for a comprehensive statistical analysis and forecasting project using R, addressing global population trends using the UN World Population Prospects dataset. Coordinated project tasks and wrapped up deliverables. 
+            <p>
+                Conducted data cleaning and exploratory data analysis (EDA). Implemented a <strong>Prophet machine learning model</strong> with consideration of external regressors to forecast population dynamics through 2100. Developed comparisons with experiments.
+            <p>
+                Contributed to creating <strong>interactive visualizations via Shiny app</strong>.
+            </p>
+            <p>
+                Final Grade: 26/25 (With 1 extra credit) This project was selected as one of the three excellent group projects out of around 50 groups.
+            </p>
+            <p>
+                <a href="https://github.com/KatherynZheng/datasci306-final_project" target="_blank">View Project on GitHub</a>
+            </p>
+
         </section>
 
         <!-- Extra Section -->
         <section>
-            <h2 onclick="toggleSection(event)">Extra-Curriculum Experience</h2>
-            <div class="content">
-                <h3>Hobbies: Drawing and Painting</h3>
-                <p><strong>Since 2009</strong></p>
-                <p>Artwork Portfolio: <a href="https://umich-my.sharepoint.com/:f:/g/personal/kaiyanz_umich_edu/EplJ2lxpyfRKt_pZDWc6l0QB__qatJkOX1PxF96Cfbbrlg?e=r88o0e">OneDrive Link</a> </p>
-            </div>
+            <h2>Extra-Curriculum Experience</h2>
+            <h3>Hobbies: Drawing and Painting</h3>
+            <p><strong>Since 2009</strong></p>
+            <p>Artwork Portfolio: <a href="https://umich-my.sharepoint.com/:f:/g/personal/kaiyanz_umich_edu/EplJ2lxpyfRKt_pZDWc6l0QB__qatJkOX1PxF96Cfbbrlg?e=r88o0e">OneDrive Link</a> </p>
         </section>
     </div>
 
