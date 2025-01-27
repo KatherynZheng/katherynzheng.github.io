@@ -3,107 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kaiyan Zheng - Personal Website</title>
+    <title>Kaiyan Zheng - About Me & Education</title>
     <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;700&display=swap" rel="stylesheet">
-    <style>
-        body {
-            font-family: 'Lora', serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f4;
-            color: #333;
-        }
-        .container {
-            max-width: 900px;
-            margin: 0 auto;
-            padding: 20px;
-        }
-        header {
-            text-align: center;
-            padding: 50px 0;
-            background-color: #fff;
-            border-bottom: 1px solid #ddd;
-        }
-        header img {
-            width: 150px;
-            height: 150px;
-            border-radius: 50%;
-            object-fit: cover;
-            margin-bottom: 20px;
-        }
-        header h1 {
-            font-size: 2.5em;
-            margin: 10px 0;
-            color: #333;
-        }
-        header p {
-            font-size: 1.2em;
-            margin: 5px 0;
-            color: #777;
-        }
-        section {
-            background: #fff;
-            margin: 20px 0;
-            padding: 30px;
-            border-radius: 10px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-        }
-        h2 {
-            color: #333;
-            font-size: 1.8em;
-            margin-bottom: 15px;
-            border-bottom: 2px solid #ddd;
-            padding-bottom: 10px;
-        }
-        ul {
-            list-style-type: none;
-            padding-left: 0;
-        }
-        ul li {
-            font-size: 1.1em;
-            margin: 10px 0;
-            padding-left: 20px;
-            position: relative;
-        }
-        ul li:before {
-            content: "•";
-            color: #1a73e8;
-            font-weight: bold;
-            position: absolute;
-            left: 0;
-            top: 0;
-        }
-        a {
-            color: #1a73e8;
-            text-decoration: none;
-        }
-        a:hover {
-            text-decoration: underline;
-        }
-        footer {
-            text-align: center;
-            padding: 20px;
-            margin-top: 20px;
-            background-color: #333;
-            color: #fff;
-        }
-        /* About section styles */
-        .about-text {
-            font-size: 1.1em;
-            line-height: 1.8;
-            margin-bottom: 20px;
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <!-- Navigation Banner -->
+    <nav>
+        <ul>
+            <li><a href="index.html">About Me & Education</a></li>
+            <li><a href="research.html">Research</a></li>
+            <li><a href="course_projects.html">Course Projects</a></li>
+            <li><a href="academic_experience.html">Academic Experience</a></li>
+        </ul>
+    </nav>
 
     <div class="container">
         <!-- Header with image and introduction -->
         <header>
-            <img src="personal_website.png" alt="Kaiyan Zheng">
+            <img src="assets/personal_website.png" alt="Kaiyan Zheng">
             <h1>Kaiyan Zheng</h1>
             <p>Undergraduate Student in Data Science & Mathematics | University of Michigan - Ann Arbor</p>
-            <p>Email: <a href="mailto:kaiyanz@umich.edu">kaiyanz@umich.edu</a> | <a href="https://www.linkedin.com/in/kaiyanzheng">LinkedIn</a> | <a href="Resume_Kaiyan_Zheng.pdf" download>Download CV</a></p>
+            <p>Email: <a href="mailto:kaiyanz@umich.edu">kaiyanz@umich.edu</a> | <a href="https://www.linkedin.com/in/kaiyanzheng">LinkedIn</a> | <a href="assets/Resume_Kaiyan_Zheng.pdf" download>Download CV</a></p>
         </header>
 
         <!-- About Section -->
@@ -127,104 +48,11 @@
             <p><strong>GPA:</strong> 3.6 (Top 20%, 2022-2024 Dean's List)</p>
             <p><strong>Core Coursework:</strong> C/C++ Programming, Database Systems, Data Structures, Stochastic Processes, Ordinary Differential Equations, Optimization, Discrete Mathematics, Probability and Statistics</p>
         </section>
-
-        <!-- Research Section -->
-        <section>
-            <h2>Research Projects</h2>
-            <h3>Federated Unlearning with Gradient Descent and Conflict Mitigation</h3>
-            <p>Zibin Pan, Zhichao Wang, Chi Li, <b>Kaiyan Zheng</b>, Boqi Wang, Xiaoying Tang, Junhua Zhao.</p>
-            <p>Research Paper Accepted by AAAI 2025, May. 2024 to Aug. 2024</p>
-            <p>
-                Supervised by 
-                <a href="https://scholar.google.com/citations?user=M2oDRWEAAAAJ&hl=en" target="_blank">Prof. Junhua Zhao</a>, 
-                Laboratory of Energy Internet
-            </p>
-            
-            <p>Our proposed FedOSD introduces an unlearning cross entropy loss and calculates an orthogonal steepest descent direction, improving unlearning efficiency and maintaining model utility, which is verified by extensive experiments.</p>
-            <a href="https://arxiv.org/abs/2412.20200" target="_blank"> View Preprint Paper</a>
-
-            <h3>Machine Learning Meets Micro-robotics</h3>
-            <p><strong>With Jiachun Zheng et al.</strong></p>
-            <p>Research Review (To be Submitted), Oct. 2023 </p>
-            <p>
-                Supervised by 
-                <a href="https://scholar.google.com/citations?hl=en&user=deJNhn4AAAAJ" target="_blank">Prof. Zhuoran Zhang</a>, 
-                Medical Micro-Robotics Laboratory
-            </p>            
-            <p>Discussed recent innovations in learning-based micro-robots, especially in the medical robotics field. Responsible for the planning section in the review.</p>
-        </section>
-
-        <!-- Awards Section -->
-        <section>
-            <h2>Awards</h2>
-            <ul>
-                <li>CUHK(SZ) Bowen Scholarship (2022-2024)</li>
-                <li>CUHK(SZ) Dean's List (2022-2024)</li>
-                <li>Second Prize, China Undergraduate Mathematical Contest in Modeling (2023)</li>
-                <li>First Prize, China National High School Biology Olympiad (2021)</li>
-            </ul>
-        </section>
-
-        <!-- Teaching Section -->
-        <section>
-            <h2>Academic Experience</h2>
-            <h3>Undergraduate Student Teaching Fellow (CSC1001), CUHK(SZ)</h3>
-            <p><strong>Sept. 2023 - Dec. 2023</strong></p>
-            <p>Introduction to Computer Science: Programming Methodology (Python). Engaged in homework grading design for 1000+ students. Held weekly labs and answered questions for students online and offline.</p>
-
-            <h3>Academic Mentor and Coordinator, CUHK(SZ) Future Freshman Winter Camp</h3>
-            <p><strong>Feb. 2024</strong></p>
-            <p>Conducted lectures to 250+ students on Introductory Machine Learning. Planned and managed the lecture schedule and materials.</p>
-        </section>
-
-        <!-- Course Projects Section -->
-        <section>
-            <h2>Course Projects</h2>
-
-            <h3>Student Information System (SIS) Redesign - CSC3170 (Database Systems) at CUHKSZ</h3>
-            <p>
-                Coordinated a cross-functional team to design and implement an advanced SIS, addressing inefficiencies in academic management systems.
-            </p>
-            <p>
-                Contributed to the integration of pre-trained Large Language Models (LLMs) for personalized course recommendations and we also implemented Zero-Shot Text-to-Speech (TTS) models to enhance accessibility for visually impaired users.
-            </p>
-            <p>
-                Contributed to core system functionalities, including course search, selection, arrangement, and personalized assistance.
-            </p>
-            <p>
-                <a href="https://github.com/HuRuilizhen/CSC3170-Project" target="_blank">View Project on GitHub</a>
-            </p>
-
-            <h3>Population Projections Using Machine Learning - DATASCI 306 (Statitical Programming) at UMich</h3>
-            <p>
-                Led a team of five for a comprehensive statistical analysis and forecasting project using R, addressing global population trends using the UN World Population Prospects dataset. Coordinated project tasks and wrapped up deliverables. 
-            <p>
-                Conducted data cleaning and exploratory data analysis (EDA). Implemented a <strong>Prophet machine learning model</strong> with consideration of external regressors to forecast population dynamics through 2100. Developed comparisons with experiments.
-            <p>
-                Contributed to creating <strong>interactive visualizations via Shiny app</strong>.
-            </p>
-            <p>
-                Final Grade: 26/25 (With 1 extra credit) This project was selected as one of the three excellent group projects out of around 50 groups.
-            </p>
-            <p>
-                <a href="https://github.com/KatherynZheng/datasci306-final_project" target="_blank">View Project on GitHub</a>
-            </p>
-
-        </section>
-
-        <!-- Extra Section -->
-        <section>
-            <h2>Extra-Curriculum Experience</h2>
-            <h3>Hobbies: Drawing and Painting</h3>
-            <p><strong>Since 2009</strong></p>
-            <p>Artwork Portfolio: <a href="https://umich-my.sharepoint.com/:f:/g/personal/kaiyanz_umich_edu/EplJ2lxpyfRKt_pZDWc6l0QB__qatJkOX1PxF96Cfbbrlg?e=r88o0e">OneDrive Link</a> </p>
-        </section>
     </div>
 
     <!-- Footer -->
     <footer>
         <p>&copy; 2024 Kaiyan Zheng. All Rights Reserved.</p>
     </footer>
-
 </body>
 </html>
