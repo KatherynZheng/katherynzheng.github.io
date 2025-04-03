@@ -4,66 +4,151 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kaiyan Zheng - Course Projects</title>
-    <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Segoe+UI:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <!-- Navigation Banner -->
+    <!-- Header with profile image and introduction -->
+    <header>
+        <div class="profile-container">
+            <img src="assets/personal_website.png" alt="Kaiyan Zheng" class="profile-img">
+            <h1 class="name">Kaiyan Zheng</h1>
+            <p class="title">Undergraduate Student | University of Michigan - Ann Arbor</p>
+            <div class="social-links" style="justify-content: center; margin: 1rem auto;">
+                <a href="mailto:kaiyanz@umich.edu"><i class="fas fa-envelope"></i></a>
+                <a href="https://www.linkedin.com/in/kaiyanzheng"><i class="fab fa-linkedin"></i></a>
+                <a href="assets/Resume_Kaiyan_Zheng.pdf" download><i class="fas fa-file-pdf"></i></a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Navigation -->
     <nav>
         <ul>
-            <li><a href="index.html">About Me & Education</a></li>
+            <li><a href="index.html">About Me</a></li>
             <li><a href="research.html">Research</a></li>
             <li><a href="course_projects.html">Course Projects</a></li>
             <li><a href="academic_experience.html">Academic Experience</a></li>
         </ul>
     </nav>
 
-    <div class="container">
-        <!-- Header -->
-        <header>
-            <h1>Course Projects</h1>
-        </header>
-
+    <!-- Main Content -->
+    <main>
         <!-- Course Projects Section -->
-        <section>
-            <h2>Student Information System (SIS) Redesign - CSC3170 (Database Systems) at CUHK(SZ)</h2>
-            <p>
-                Coordinated a cross-functional team to design and implement an advanced SIS, addressing inefficiencies in academic management systems.
-            </p>
-            <p>
-                Contributed to the integration of pre-trained Large Language Models (LLMs) for personalized course recommendations and implemented Zero-Shot Text-to-Speech (TTS) models to enhance accessibility for visually impaired users.
-            </p>
-            <p>
-                Contributed to core system functionalities, including course search, selection, arrangement, and personalized assistance.
-            </p>
-            <p>
-                <a href="https://github.com/HuRuilizhen/CSC3170-Project" target="_blank">View Project on GitHub</a>
-            </p>
+        <section id="projects" class="animate-fadeInUp">
+            <h2 class="section-title">Course Projects</h2>
+            
+            <div class="projects-grid">
+                <!-- Project 1 -->
+                <div class="project-card">
+                    <div class="project-content">
+                        <h3 class="project-title">Student Information System (SIS) Redesign</h3>
+                        <p class="project-subtitle">CSC3170 (Database Systems) - CUHK(SZ)</p>
+                        <p class="project-description">
+                            Coordinated a cross-functional team to design and implement an advanced SIS, addressing inefficiencies in academic management systems.
+                        </p>
+                        <p class="project-description">
+                            Contributed to the integration of pre-trained Large Language Models (LLMs) for personalized course recommendations and implemented Zero-Shot Text-to-Speech (TTS) models to enhance accessibility.
+                        </p>
+                        <div class="project-links">
+                            <a href="https://github.com/HuRuilizhen/CSC3170-Project" target="_blank">GitHub <i class="fab fa-github"></i></a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project 2 -->
+                <div class="project-card">
+                    <div class="project-content">
+                        <h3 class="project-title">Population Projections Using Machine Learning</h3>
+                        <p class="project-subtitle">DATASCI 306 (Statistical Programming) - UMich</p>
+                        <p class="project-description">
+                            Led a team of five for a comprehensive statistical analysis and forecasting project using R, addressing global population trends using the UN World Population Prospects dataset.
+                        </p>
+                        <p class="project-description">
+                            Implemented a <strong>Prophet machine learning model</strong> with external regressors to forecast population dynamics through 2100. Created <strong>interactive visualizations via Shiny app</strong>.
+                        </p>
+                        <p class="project-description">
+                            <em>Final Grade: 26/25 (With 1 extra credit). Selected as one of three excellent projects out of ~50 groups.</em>
+                        </p>
+                        <div class="project-links">
+                            <a href="https://github.com/KatherynZheng/datasci306-final_project" target="_blank">GitHub <i class="fab fa-github"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </section>
+    </main>
 
-        <section>
-            <h2>Population Projections Using Machine Learning - DATASCI 306 (Statistical Programming) at UMich</h2>
-            <p>
-                Led a team of five for a comprehensive statistical analysis and forecasting project using R, addressing global population trends using the UN World Population Prospects dataset. Coordinated project tasks and wrapped up deliverables.
-            </p>
-            <p>
-                Conducted data cleaning and exploratory data analysis (EDA). Implemented a <strong>Prophet machine learning model</strong> with consideration of external regressors to forecast population dynamics through 2100. Developed comparisons with experiments.
-            </p>
-            <p>
-                Contributed to creating <strong>interactive visualizations via Shiny app</strong>.
-            </p>
-            <p>
-                Final Grade: 26/25 (With 1 extra credit). This project was selected as one of the three excellent group projects out of around 50 groups.
-            </p>
-            <p>
-                <a href="https://github.com/KatherynZheng/datasci306-final_project" target="_blank">View Project on GitHub</a>
-            </p>
-        </section>
+    <!-- Back to Top Button -->
+    <div class="back-to-top">
+        <i class="fas fa-arrow-up"></i>
+    </div>
+
+    <!-- Theme Toggle Button -->
+    <div class="theme-toggle">
+        <i class="fas fa-moon"></i>
     </div>
 
     <!-- Footer -->
     <footer>
         <p>&copy; 2024 Kaiyan Zheng. All Rights Reserved.</p>
     </footer>
+
+    <!-- JavaScript for Animations, Scroll Effects, and Theme Toggle -->
+    <script>
+        // Theme Toggle Functionality
+        const themeToggle = document.querySelector('.theme-toggle');
+        const body = document.body;
+        
+        themeToggle.addEventListener('click', () => {
+            body.classList.toggle('dark-theme');
+            
+            // Change icon based on theme
+            const icon = themeToggle.querySelector('i');
+            if (body.classList.contains('dark-theme')) {
+                icon.classList.remove('fa-moon');
+                icon.classList.add('fa-sun');
+            } else {
+                icon.classList.remove('fa-sun');
+                icon.classList.add('fa-moon');
+            }
+        });
+        
+        // Back to Top Button
+        const backToTop = document.querySelector('.back-to-top');
+        
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 300) {
+                backToTop.classList.add('visible');
+            } else {
+                backToTop.classList.remove('visible');
+            }
+        });
+        
+        backToTop.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+        
+        // Animate sections on scroll
+        const sections = document.querySelectorAll('section');
+        
+        const revealSection = () => {
+            sections.forEach(section => {
+                const sectionTop = section.getBoundingClientRect().top;
+                const triggerPoint = window.innerHeight * 0.8;
+                
+                if (sectionTop < triggerPoint) {
+                    section.classList.add('visible');
+                }
+            });
+        };
+        
+        window.addEventListener('scroll', revealSection);
+        window.addEventListener('load', revealSection);
+    </script>
 </body>
 </html>

@@ -4,53 +4,145 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kaiyan Zheng - Academic Experience</title>
-    <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Segoe+UI:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <!-- Navigation Banner -->
+    <!-- Header with profile image and introduction -->
+    <header>
+        <div class="profile-container">
+            <img src="assets/personal_website.png" alt="Kaiyan Zheng" class="profile-img">
+            <h1 class="name">Kaiyan Zheng</h1>
+            <p class="title">Undergraduate Student | University of Michigan - Ann Arbor</p>
+            <div class="social-links" style="justify-content: center; margin: 1rem auto;">
+                <a href="mailto:kaiyanz@umich.edu"><i class="fas fa-envelope"></i></a>
+                <a href="https://www.linkedin.com/in/kaiyanzheng"><i class="fab fa-linkedin"></i></a>
+                <a href="assets/Resume_Kaiyan_Zheng.pdf" download><i class="fas fa-file-pdf"></i></a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Navigation -->
     <nav>
         <ul>
-            <li><a href="index.html">About Me & Education</a></li>
+            <li><a href="index.html">About Me</a></li>
             <li><a href="research.html">Research</a></li>
             <li><a href="course_projects.html">Course Projects</a></li>
             <li><a href="academic_experience.html">Academic Experience</a></li>
         </ul>
     </nav>
 
-    <div class="container">
-        <!-- Header -->
-        <header>
-            <h1>Academic Experience</h1>
-        </header>
-
+    <!-- Main Content -->
+    <main>
         <!-- Awards Section -->
-        <section>
-            <h2>Awards</h2>
-            <ul>
-                <li>CUHK(SZ) Bowen Scholarship (2022-2024)</li>
-                <li>CUHK(SZ) Dean's List (2022-2024)</li>
-                <li>Second Prize, China Undergraduate Mathematical Contest in Modeling (2023)</li>
-                <li>First Prize, China National High School Biology Olympiad (2021)</li>
-            </ul>
+        <section id="awards" class="animate-fadeInUp">
+            <h2 class="section-title">Awards</h2>
+            <div class="skills-container">
+                <div class="skill-item">University of Michigan -  University Honors (2024)</div>
+                <div class="skill-item">CUHK(SZ) Bowen Scholarship (2022-2024)</div>
+                <div class="skill-item">CUHK(SZ) Dean's List (2022-2024)</div>
+                <div class="skill-item">Second Prize, China Undergraduate Mathematical Contest in Modeling (2023)</div>
+                <div class="skill-item">First Prize, China National High School Biology Olympiad (2021)</div>
+            </div>
         </section>
 
         <!-- Teaching Experience Section -->
-        <section>
-            <h2>Teaching Experience</h2>
-            <h3>Undergraduate Student Teaching Fellow (CSC1001), CUHK(SZ)</h3>
-            <p><strong>Sept. 2023 - Dec. 2023</strong></p>
-            <p>Introduction to Computer Science: Programming Methodology (Python). Engaged in homework grading design for 1000+ students. Held weekly labs and answered questions for students online and offline.</p>
-
-            <h3>Academic Mentor and Coordinator, CUHK(SZ) Future Freshman Winter Camp</h3>
-            <p><strong>Feb. 2024</strong></p>
-            <p>Conducted lectures to 250+ students on Introductory Machine Learning. Planned and managed the lecture schedule and materials.</p>
+        <section id="teaching" class="animate-fadeInUp">
+            <h2 class="section-title">Teaching Experience</h2>
+            
+            <div class="experience-item">
+                <h3>Undergraduate Student Teaching Fellow (CSC1001)</h3>
+                <p class="experience-date">September 2023 - December 2023</p>
+                <p><strong>The Chinese University of Hong Kong, Shenzhen</strong></p>
+                <ul>
+                    <li>Introduction to Computer Science: Programming Methodology (Python)</li>
+                    <li>Engaged in homework grading design for 1000+ students</li>
+                    <li>Held weekly labs and answered questions for students online and offline</li>
+                </ul>
+            </div>
+            
+            <div class="experience-item">
+                <h3>Academic Mentor and Coordinator, CUHK(SZ) Future Freshman Winter Camp</h3>
+                <p class="experience-date">February 2024</p>
+                <ul>
+                    <li>Conducted lectures to 250+ students on Introductory Machine Learning</li>
+                    <li>Planned and managed the lecture schedule and materials</li>
+                    <li>Provided guidance and support to incoming freshmen</li>
+                </ul>
+            </div>
         </section>
+    </main>
+
+    <!-- Back to Top Button -->
+    <div class="back-to-top">
+        <i class="fas fa-arrow-up"></i>
+    </div>
+
+    <!-- Theme Toggle Button -->
+    <div class="theme-toggle">
+        <i class="fas fa-moon"></i>
     </div>
 
     <!-- Footer -->
     <footer>
         <p>&copy; 2024 Kaiyan Zheng. All Rights Reserved.</p>
     </footer>
+
+    <!-- JavaScript for Animations, Scroll Effects, and Theme Toggle -->
+    <script>
+        // Theme Toggle Functionality
+        const themeToggle = document.querySelector('.theme-toggle');
+        const body = document.body;
+        
+        themeToggle.addEventListener('click', () => {
+            body.classList.toggle('dark-theme');
+            
+            // Change icon based on theme
+            const icon = themeToggle.querySelector('i');
+            if (body.classList.contains('dark-theme')) {
+                icon.classList.remove('fa-moon');
+                icon.classList.add('fa-sun');
+            } else {
+                icon.classList.remove('fa-sun');
+                icon.classList.add('fa-moon');
+            }
+        });
+        
+        // Back to Top Button
+        const backToTop = document.querySelector('.back-to-top');
+        
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 300) {
+                backToTop.classList.add('visible');
+            } else {
+                backToTop.classList.remove('visible');
+            }
+        });
+        
+        backToTop.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+        
+        // Animate sections on scroll
+        const sections = document.querySelectorAll('section');
+        
+        const revealSection = () => {
+            sections.forEach(section => {
+                const sectionTop = section.getBoundingClientRect().top;
+                const triggerPoint = window.innerHeight * 0.8;
+                
+                if (sectionTop < triggerPoint) {
+                    section.classList.add('visible');
+                }
+            });
+        };
+        
+        window.addEventListener('scroll', revealSection);
+        window.addEventListener('load', revealSection);
+    </script>
 </body>
 </html>

@@ -4,56 +4,192 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kaiyan Zheng - Research</title>
-    <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Segoe+UI:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <!-- Navigation Banner -->
+    <!-- Header with profile image and introduction -->
+    <header>
+        <div class="profile-container">
+            <img src="assets/personal_website.png" alt="Kaiyan Zheng" class="profile-img">
+            <h1 class="name">Kaiyan Zheng</h1>
+            <p class="title">Undergraduate Student | University of Michigan - Ann Arbor</p>
+            <div class="social-links" style="justify-content: center; margin: 1rem auto;">
+                <a href="mailto:kaiyanz@umich.edu"><i class="fas fa-envelope"></i></a>
+                <a href="https://www.linkedin.com/in/kaiyanzheng"><i class="fab fa-linkedin"></i></a>
+                <a href="assets/Resume_Kaiyan_Zheng.pdf" download><i class="fas fa-file-pdf"></i></a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Navigation -->
     <nav>
         <ul>
-            <li><a href="index.html">About Me & Education</a></li>
+            <li><a href="index.html">About Me</a></li>
             <li><a href="research.html">Research</a></li>
             <li><a href="course_projects.html">Course Projects</a></li>
             <li><a href="academic_experience.html">Academic Experience</a></li>
         </ul>
     </nav>
 
-    <div class="container">
-        <!-- Header -->
-        <header>
-            <h1>Research Projects</h1>
-        </header>
-
-        <!-- Research Section -->
-        <section>
-            <h2>Federated Unlearning with Gradient Descent and Conflict Mitigation</h2>
-            <p>Zibin Pan, Zhichao Wang, Chi Li, <b>Kaiyan Zheng</b>, Boqi Wang, Xiaoying Tang, Junhua Zhao.</p>
-            <p>Research Paper Accepted by AAAI 2025, May. 2024 to Aug. 2024</p>
-            <p>
-                Supervised by 
-                <a href="https://scholar.google.com/citations?user=M2oDRWEAAAAJ&hl=en" target="_blank">Prof. Junhua Zhao</a>, 
-                Laboratory of Energy Internet
-            </p>
-            <p>Our proposed FedOSD introduces an unlearning cross entropy loss and calculates an orthogonal steepest descent direction, improving unlearning efficiency and maintaining model utility, which is verified by extensive experiments.</p>
-            <p><a href="https://arxiv.org/abs/2412.20200" target="_blank">View Preprint Paper</a></p>
+    <!-- Main Content -->
+    <main>
+        <!-- Research Experience Section -->
+        <section id="research-experience" class="animate-fadeInUp">
+            <h2 class="section-title">Research Experience</h2>
+            
+            <div class="research-container">
+                <!-- Research Project 1 -->
+                <div class="research-item">
+                    <div class="research-content">
+                        <h3>Low-Dimensional Structures in High-Dimensional Machine Learning</h3>
+                        <p class="research-subtitle">Summer Research Program (SURE)</p>
+                        <p class="research-authors">University of Michigan | May 2025 - Present</p>
+                        <p class="research-description">
+                            Under supervision of <a href="https://sites.google.com/site/ruiweijianguf/" target="_blank" style="color: #fff9c4; text-decoration: underline;">Prof. Salar Fattahi</a> at the Department of Industrial and Operations Engineering.
+                        </p>
+                        <div class="research-links">
+                            <a href="https://sure.engin.umich.edu" class="research-link" target="_blank">Program Website</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Research Project 2 -->
+                <div class="research-item">
+                    <div class="research-content">
+                        <h3>Dynamic Evacuation Routing with Inferred Trust</h3>
+                        <p class="research-subtitle">Independent Study</p>
+                        <p class="research-authors">University of Michigan | January 2025 - Present</p>
+                        <p class="research-description">
+                            Under supervision of <a href="https://sites.google.com/site/ruiweijianguf/" target="_blank" style="color: #fff9c4; text-decoration: underline;">Prof. Ruiwei Jiang</a> at the Department of Industrial and Operations Engineering.
+                        </p>
+                        <p class="research-description">
+                            Developed a real-time evacuation route recommendation system, solving a dynamic mixed integer programming problem under trust modeling and inference.
+                        </p>
+                    </div>
+                </div>
+                
+                <!-- Research Project 3 -->
+                <div class="research-item">
+                    <div class="research-content">
+                        <h3>Federated Unlearning with Orthogonal Steepest Descent</h3>
+                        <p class="research-subtitle">Research Project with Zibin Pan et. al.</p>
+                        <p class="research-authors">CUHK(SZ) | May 2024 - August 2024</p>
+                        <p class="research-description">
+                            Conducted research at the Laboratory of Energy Internet under <a href="https://scholar.google.com/citations?hl=en&user=M2oDRWEAAAAJ" target="_blank" style="color: #fff9c4; text-decoration: underline;">Prof. Junhua Zhao</a>, focusing on privacy-preserving machine learning and optimization in federated systems.
+                        </p>
+                        <p class="research-description">
+                            We proposed a method to <strong>efficiently remove target client data</strong> while minimizing model utility loss. Designed an unlearning Cross-Entropy loss to improve <strong>gradient ascent convergence</strong> and introduced a <strong>steepest descent direction</strong> to mitigate gradient conflicts, outperforming state-of-the-art unlearning methods in FL scenarios.
+                        </p>
+                    </div>
+                </div>
+                
+                <!-- Research Project 4 -->
+                <div class="research-item">
+                    <div class="research-content">
+                        <h3>Machine Learning Meets Micro-robotics</h3>
+                        <p class="research-subtitle">Review Article with Jiachun Zheng et. al.</p>
+                        <p class="research-authors">CUHK(SZ) | October 2023 - July 2024</p>
+                        <p class="research-description">
+                            At the Medical Micro-Robotics Laboratory under <a href="https://scholar.google.com/citations?user=deJNhn4AAAAJ&hl=en" target="_blank" style="color: #fff9c4; text-decoration: underline;">Prof. Zhuoran Zhang</a>, focusing on learning-based planning strategies.
+                        </p>
+                        <p class="research-description">
+                            In a survey on recent microrobotics research in Control, Vision and Planning, I am responsible for the Planning section, analyzing recent advancements in <em>reinforcement learning, motion optimization, and adaptive decision-making</em> for micro-robot <strong>trajectory planning</strong> and environmental interaction.
+                        </p>
+                    </div>
+                </div>
+            </div>
         </section>
-
-        <section>
-            <h2>Machine Learning Meets Micro-robotics</h2>
-            <p><strong>With Jiachun Zheng et al.</strong></p>
-            <p>Research Review (To be Submitted), Oct. 2023</p>
-            <p>
-                Supervised by 
-                <a href="https://scholar.google.com/citations?hl=en&user=deJNhn4AAAAJ" target="_blank">Prof. Zhuoran Zhang</a>, 
-                Medical Micro-Robotics Laboratory
-            </p>
-            <p>Discussed recent innovations in learning-based micro-robots, especially in the medical robotics field. Responsible for the planning section in the review.</p>
+        
+        <!-- Publications Section -->
+        <section id="publications" class="animate-fadeInUp">
+            <h2 class="section-title">Publications</h2>
+            
+            <div class="research-container">
+                <div class="research-item">
+                    <div class="research-content">
+                        <h3>Federated Unlearning with Gradient Descent and Conflict Mitigation</h3>
+                        <p class="research-subtitle">AAAI 2025</p>
+                        <p class="research-authors">Zibin Pan, Zhichao Wang, Chi Li, <strong>Kaiyan Zheng</strong>, Boqi Wang, Xiaoying Tang, Junhua Zhao</p>
+                        <div class="research-links">
+                            <a href="https://arxiv.org/pdf/2412.20200" class="research-link" target="_blank">Paper on arXiv</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </section>
+    </main>
+
+    <!-- Back to Top Button -->
+    <div class="back-to-top">
+        <i class="fas fa-arrow-up"></i>
+    </div>
+
+    <!-- Theme Toggle Button -->
+    <div class="theme-toggle">
+        <i class="fas fa-moon"></i>
     </div>
 
     <!-- Footer -->
     <footer>
         <p>&copy; 2024 Kaiyan Zheng. All Rights Reserved.</p>
     </footer>
+
+    <!-- JavaScript for Animations, Scroll Effects, and Theme Toggle -->
+    <script>
+        // Theme Toggle Functionality
+        const themeToggle = document.querySelector('.theme-toggle');
+        const body = document.body;
+        
+        themeToggle.addEventListener('click', () => {
+            body.classList.toggle('dark-theme');
+            
+            // Change icon based on theme
+            const icon = themeToggle.querySelector('i');
+            if (body.classList.contains('dark-theme')) {
+                icon.classList.remove('fa-moon');
+                icon.classList.add('fa-sun');
+            } else {
+                icon.classList.remove('fa-sun');
+                icon.classList.add('fa-moon');
+            }
+        });
+        
+        // Back to Top Button
+        const backToTop = document.querySelector('.back-to-top');
+        
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 300) {
+                backToTop.classList.add('visible');
+            } else {
+                backToTop.classList.remove('visible');
+            }
+        });
+        
+        backToTop.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+        
+        // Animate sections on scroll
+        const sections = document.querySelectorAll('section');
+        
+        const revealSection = () => {
+            sections.forEach(section => {
+                const sectionTop = section.getBoundingClientRect().top;
+                const triggerPoint = window.innerHeight * 0.8;
+                
+                if (sectionTop < triggerPoint) {
+                    section.classList.add('visible');
+                }
+            });
+        };
+        
+        window.addEventListener('scroll', revealSection);
+        window.addEventListener('load', revealSection);
+    </script>
 </body>
 </html>
