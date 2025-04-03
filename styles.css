@@ -5,14 +5,14 @@
     box-sizing: border-box;
 }
 
-/* Variables */
+/* Variables - Updated for deep blue/purple and light yellow theme */
 :root {
-    --primary-color: #4a6fa5;
-    --secondary-color: #166088;
-    --accent-color: #4fc3f7;
+    --primary-color: #2c3e67;    /* Deeper blue */
+    --secondary-color: #363b5e;  /* Deep blue-purple */
+    --accent-color: #f0e68c;     /* Light yellow/khaki */
     --text-color: #333;
     --light-bg: #f9f9f9;
-    --dark-bg: #2c3e50;
+    --dark-bg: #1a1f35;          /* Very deep blue */
     --transition: all 0.3s ease;
 }
 
@@ -235,7 +235,7 @@ section.visible {
     background-color: var(--accent-color);
     color: var(--dark-bg);
     transform: translateY(-3px);
-    box-shadow: 0 5px 15px rgba(79, 195, 247, 0.4);
+    box-shadow: 0 5px 15px rgba(240, 230, 140, 0.4);
 }
 
 @media (max-width: 768px) {
@@ -285,6 +285,12 @@ section.visible {
     color: var(--secondary-color);
 }
 
+.project-subtitle {
+    color: #666;
+    font-style: italic;
+    margin-bottom: 0.5rem;
+}
+
 .project-description {
     margin-bottom: 1rem;
 }
@@ -321,6 +327,7 @@ section.visible {
 .skill-item:hover {
     background-color: var(--secondary-color);
     transform: scale(1.05);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
 }
 
 /* Experience Section */
@@ -376,25 +383,29 @@ section.visible {
 
 .social-links {
     display: flex;
-    gap: 1.5rem;
+    gap: 2.5rem; /* Increased spacing between icons */
     margin-top: 1.5rem;
+    justify-content: center; /* Center the icons */
 }
 
 .social-links a {
     display: inline-flex;
     justify-content: center;
     align-items: center;
-    width: 40px;
-    height: 40px;
+    width: 55px; /* Larger icon container */
+    height: 55px; /* Larger icon container */
     border-radius: 50%;
-    background-color: var(--primary-color);
-    color: white;
+    background-color: transparent; /* Transparent background */
+    color: var(--accent-color); /* Light yellow color */
     transition: var(--transition);
+    font-size: 1.5rem; /* Larger icon size */
+    border: 2px solid var(--accent-color); /* Add border for better visibility */
 }
 
 .social-links a:hover {
     background-color: var(--accent-color);
-    transform: scale(1.1);
+    transform: scale(1.15);
+    color: var(--dark-bg);
 }
 
 /* Footer */
@@ -431,15 +442,18 @@ footer {
 /* Dark Theme */
 body.dark-theme {
     --text-color: #f0f0f0;
-    --light-bg: #1a1a1a;
+    --light-bg: #101426;  /* Darker blue for dark mode background */
     background-color: var(--light-bg);
     color: var(--text-color);
 }
 
-body.dark-theme .project-card,
+body.dark-theme .project-card {
+    background-color: #1c2135;  /* Slightly lighter than background */
+    color: #f0f0f0;
+}
+
 body.dark-theme .section-title,
 body.dark-theme .project-title {
-    background-color: #2a2a2a;
     color: #f0f0f0;
 }
 
