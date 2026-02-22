@@ -16,6 +16,38 @@
     --transition: all 0.3s ease;
 }
 
+
+/* Global link styling (light mode) */
+a {
+    color: var(--primary-color);          /* dark blue */
+    text-decoration: underline;
+    text-decoration-thickness: 2px;
+    text-underline-offset: 3px;
+    transition: var(--transition);
+}
+
+a:hover {
+    color: var(--secondary-color);        /* slightly different deep blue */
+}
+
+/* Links inside dark cards like .research-item (dark background) */
+.research-item a {
+    color: var(--accent-color);           /* light yellow on dark */
+}
+
+.research-item a:hover {
+    color: #ffffff;
+}
+
+/* Dark theme overrides */
+body.dark-theme a {
+    color: var(--accent-color);           /* light yellow on dark mode */
+}
+
+body.dark-theme a:hover {
+    color: #ffffff;
+}
+
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     line-height: 1.6;
