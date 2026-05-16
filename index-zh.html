@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>郑恺妍 - 个人主页</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Segoe+UI:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="language-switch" aria-label="语言切换">
+        <a href="index.html">EN</a>
+        <span class="active">中</span>
+    </div>
+
+    <header>
+        <div class="profile-container">
+            <img src="assets/personal_website.png" alt="郑恺妍" class="profile-img">
+            <h1 class="name">郑恺妍</h1>
+            <p class="title">本科生 | 密歇根大学安娜堡分校</p>
+            <div class="social-links" style="justify-content: center; margin: 1rem auto;">
+                <a href="mailto:kaiyanz@umich.edu" aria-label="邮件联系郑恺妍" title="Email"><i class="fas fa-envelope"></i></a>
+                <a href="https://www.linkedin.com/in/kaiyanzheng" target="_blank" rel="noopener" aria-label="LinkedIn profile" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                <a href="https://github.com/KatherynZheng" target="_blank" rel="noopener" aria-label="GitHub profile" title="GitHub"><i class="fab fa-github"></i></a>
+                <a href="https://scholar.google.com/scholar?q=%22Kaiyan+Zheng%22+%22Federated+Unlearning%22" target="_blank" rel="noopener" aria-label="Google Scholar" title="Google Scholar"><i class="fas fa-graduation-cap"></i></a>
+                <a href="assets/Resume_Kaiyan_Zheng_CN.pdf" target="_blank" rel="noopener" aria-label="中文简历" title="中文简历"><i class="fas fa-file-pdf"></i></a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section id="about" class="animate-fadeInUp">
+            <h2 class="section-title">个人介绍</h2>
+            <div class="about-content">
+                <p>
+                    我目前就读于密歇根大学安娜堡分校，攻读数学、数据科学和统计学相关本科学位。我的研究兴趣包括机器学习与优化。转入密歇根大学之前，我曾在香港中文大学（深圳）学习金融工程（量化金融方向）。
+                </p>
+            </div>
+        </section>
+
+        <section id="education" class="animate-fadeInUp">
+            <h2 class="section-title">教育经历</h2>
+
+            <div class="experience-item">
+                <h3>密歇根大学安娜堡分校</h3>
+                <p class="experience-date">2024 年 8 月 - 预计 2026 年 5 月</p>
+                <p><strong>专业方向：</strong></p>
+                <ul>
+                    <li><a href="https://lsa.umich.edu/math/undergraduates/major-and-minor-programs/mathematical-sciences.html" target="_blank">数学理学学士 - 运筹学与建模方向</a></li>
+                    <li><a href="https://lsa.umich.edu/stats/undergraduate-students/undergraduate-programs/majordatascience.html" target="_blank">荣誉数据科学理学学士</a></li>
+                    <li><a href="https://lsa.umich.edu/stats/undergraduate-students/undergraduate-programs/majorstatistics.html" target="_blank">统计学理学学士</a></li>
+                </ul>
+                <p><strong>核心课程：</strong><a href="https://websites.umich.edu/~yuekai/datasci415/" target="_blank">机器学习</a>、高级微积分、<a href="https://eecs281staff.github.io/eecs281.org/" target="_blank">数据结构与算法</a>、回归分析、统计计算、组合数学、金融数学</p>
+                <p><strong>研究生阶段课程：</strong>实分析、非线性规划、统计理论、实验设计、优化、随机过程（I & II）、随机优化与机器学习</p>
+            </div>
+
+            <div class="experience-item">
+                <h3>香港中文大学（深圳）</h3>
+                <p class="experience-date">2022 年 9 月 - 2024 年 7 月</p>
+                <p><strong>专业方向：</strong><a href="https://sds.cuhk.edu.cn/en/page/364" target="_blank">金融工程 - 量化金融</a></p>
+                <p><strong>核心课程：</strong>数据库系统、数据结构、随机过程、微分方程、优化、概率与统计、离散数学、微分方程</p>
+            </div>
+        </section>
+    </main>
+
+    <div class="back-to-top">
+        <i class="fas fa-arrow-up"></i>
+    </div>
+
+    <div class="theme-toggle">
+        <i class="fas fa-moon"></i>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Kaiyan Zheng. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+        const themeToggle = document.querySelector('.theme-toggle');
+        const body = document.body;
+
+        themeToggle.addEventListener('click', () => {
+            body.classList.toggle('dark-theme');
+
+            const icon = themeToggle.querySelector('i');
+            if (body.classList.contains('dark-theme')) {
+                icon.classList.remove('fa-moon');
+                icon.classList.add('fa-sun');
+            } else {
+                icon.classList.remove('fa-sun');
+                icon.classList.add('fa-moon');
+            }
+        });
+
+        const backToTop = document.querySelector('.back-to-top');
+
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 300) {
+                backToTop.classList.add('visible');
+            } else {
+                backToTop.classList.remove('visible');
+            }
+        });
+
+        backToTop.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+
+        const sections = document.querySelectorAll('section');
+
+        const revealSection = () => {
+            sections.forEach(section => {
+                const sectionTop = section.getBoundingClientRect().top;
+                const triggerPoint = window.innerHeight * 0.8;
+
+                if (sectionTop < triggerPoint) {
+                    section.classList.add('visible');
+                }
+            });
+        };
+
+        window.addEventListener('scroll', revealSection);
+        window.addEventListener('load', revealSection);
+    </script>
+</body>
+</html>
