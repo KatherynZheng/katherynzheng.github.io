@@ -418,6 +418,7 @@ section.visible {
     gap: 2.5rem; /* Increased spacing between icons */
     margin-top: 1.5rem;
     justify-content: center; /* Center the icons */
+    flex-wrap: wrap;
 }
 
 .social-links a {
@@ -545,6 +546,16 @@ body.dark-theme .project-links a {
 
     .name {
         font-size: 2rem;
+    }
+
+    .social-links {
+        gap: 1rem;
+    }
+
+    .social-links a {
+        width: 48px;
+        height: 48px;
+        font-size: 1.3rem;
     }
 
     .section-title {
