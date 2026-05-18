@@ -158,6 +158,10 @@ nav a:hover {
     color: var(--accent-color);
 }
 
+nav a[aria-current="page"] {
+    color: var(--accent-color);
+}
+
 /* Main Content */
 main {
     max-width: 1200px;
