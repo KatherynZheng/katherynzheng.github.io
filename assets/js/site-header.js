@@ -32,7 +32,7 @@
                 external: true
             },
             {
-                href: 'https://scholar.google.com/scholar?q=%22Kaiyan+Zheng%22+%22Federated+Unlearning%22',
+                href: 'https://scholar.google.com/citations?user=PzVyMd4AAAAJ&hl=en',
                 label: 'Google Scholar',
                 title: 'Google Scholar',
                 iconClass: 'fas fa-graduation-cap',
