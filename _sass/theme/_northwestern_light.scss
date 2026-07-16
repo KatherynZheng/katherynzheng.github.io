@@ -1,0 +1,58 @@
+/* ==========================================================================
+   NORTHWESTERN THEME - LIGHT VERSION
+   ========================================================================== */
+
+/* Northwestern's digital palette, used sparingly over a predominantly white UI. */
+$primary-color              : #4e2a84; // Northwestern Purple
+$purple-80                  : #684c96;
+$purple-60                  : #836eaa;
+$purple-30                  : #b6acd1;
+$purple-10                  : #e4e0ee;
+$rich-black-80              : #342f2e;
+$rich-black-50              : #716c6b;
+
+/* Semantic colors retained for notices and buttons. */
+$danger-color               : #b64a4a;
+$info-color                 : $purple-80;
+$notice-color               : $rich-black-50;
+$success-color              : #4f765f;
+$warning-color              : #a66f2c;
+
+/* Shared template settings. */
+$border-radius              : 4px;
+$box-shadow                 : 0 1px 1px rgba(52, 47, 46, 0.10);
+$global-transition          : all 0.2s ease-in-out;
+$masthead-height            : 70px;
+$navicon-width              : 28px;
+$navicon-height             : 4px;
+$sidebar-link-max-width     : 250px;
+$sidebar-screen-min-width   : 1024px;
+
+:root {
+  --global-base-color                 : #{$primary-color};
+  --global-bg-color                   : #ffffff;
+  --global-footer-bg-color            : #f6f4f8;
+  --global-border-color               : #{$purple-10};
+  --global-dark-border-color          : #{$purple-30};
+  --global-code-background-color      : #f7f5f9;
+  --global-code-text-color            : #401f68;
+  --global-fig-caption-color          : #{$rich-black-50};
+  --global-link-color                 : #{$purple-80};
+  --global-link-color-hover           : #{$primary-color};
+  --global-link-color-visited         : #765da0;
+  --global-masthead-link-color        : #{$rich-black-80};
+  --global-masthead-link-color-hover  : #{$purple-80};
+  --global-text-color                 : #{$rich-black-80};
+  --global-text-color-light           : #{$rich-black-50};
+  --global-thead-color                : #f6f4f8;
+}
+
+::selection {
+  background-color: $purple-10;
+  color: $rich-black-80;
+}
+
+::-moz-selection {
+  background-color: $purple-10;
+  color: $rich-black-80;
+}

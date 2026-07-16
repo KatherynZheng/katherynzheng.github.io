@@ -1,7 +1,7 @@
 # Academic Pages site configuration
 
 locale                   : "en-US"
-site_theme               : "default"
+site_theme               : "northwestern"
 title                    : "Kaiyan Zheng"
 title_separator          : "-"
 name                     : &name "Kaiyan Zheng"

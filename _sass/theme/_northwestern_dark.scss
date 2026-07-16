@@ -1,0 +1,62 @@
+/* ==========================================================================
+   NORTHWESTERN THEME - DARK VERSION
+   ========================================================================== */
+
+$primary-color              : #b6acd1;
+$purple-100                 : #4e2a84;
+$purple-60                  : #836eaa;
+$purple-30                  : #b6acd1;
+$purple-10                  : #e4e0ee;
+$background                 : mix($purple-100, #1f1d21, 18%);
+$background-light           : mix($purple-100, #2a272d, 14%);
+$background-lighter         : mix($purple-100, #343039, 12%);
+$text                       : #f4f2f6;
+$text-muted                 : #c8c3cd;
+$link                       : mix(#fff, $purple-30, 18%);
+$link-hover                 : $purple-10;
+
+/* Semantic colors are muted to remain comfortable on the dark surface. */
+$danger-color               : #d68181;
+$info-color                 : $purple-30;
+$notice-color               : $text-muted;
+$success-color              : #7da58a;
+$warning-color              : #c69b65;
+
+/* Shared template settings. */
+$border-radius              : 4px;
+$box-shadow                 : 0 1px 1px rgba(0, 0, 0, 0.22);
+$global-transition          : all 0.2s ease-in-out;
+$masthead-height            : 70px;
+$navicon-width              : 28px;
+$navicon-height             : 4px;
+$sidebar-link-max-width     : 250px;
+$sidebar-screen-min-width   : 1024px;
+
+html[data-theme="dark"] {
+  --global-base-color                 : #{$primary-color};
+  --global-bg-color                   : #{$background};
+  --global-footer-bg-color            : #{mix(#000, $background, 18%)};
+  --global-border-color               : #{$background-light};
+  --global-dark-border-color          : #{$background-lighter};
+  --global-code-background-color      : #{$background-light};
+  --global-code-text-color            : #{$purple-10};
+  --global-fig-caption-color          : #{$text-muted};
+  --global-link-color                 : #{$link};
+  --global-link-color-hover           : #{$link-hover};
+  --global-link-color-visited         : #{mix($purple-60, $text-muted, 55%)};
+  --global-masthead-link-color        : #{$text};
+  --global-masthead-link-color-hover  : #{$purple-30};
+  --global-text-color                 : #{$text};
+  --global-text-color-light           : #{$text-muted};
+  --global-thead-color                : #{$background-lighter};
+}
+
+html[data-theme="dark"] ::selection {
+  background-color: $purple-100;
+  color: #fff;
+}
+
+html[data-theme="dark"] ::-moz-selection {
+  background-color: $purple-100;
+  color: #fff;
+}
