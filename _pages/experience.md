@@ -10,7 +10,7 @@ redirect_from:
 ## Industry Experience
 
 <div class="experience-entry experience-entry--with-logo">
-<img class="experience-entry__logo" src="https://www.cardopt.com/favicon.ico" alt="Cardinal Operations Technology logo">
+<img class="experience-entry__logo" src="/images/cardinal-operations-logo.png" alt="Cardinal Operations Technology logo">
 <h3>Algorithm Engineer Intern</h3>
 <p><em>Jun 2026 – Present · 2 mos</em></p>
 <p><strong>Cardinal Operations Technology (Shanghai) Co. Ltd. · Internship</strong></p>

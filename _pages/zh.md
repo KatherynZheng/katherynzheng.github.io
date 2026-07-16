@@ -14,7 +14,7 @@ redirect_from:
 ## 教育经历
 
 <div class="education-entry education-entry--with-logo" markdown="1">
-<img class="education-entry__logo" src="https://common.northwestern.edu/v8/icons/favicon-180.png" alt="西北大学校徽">
+<img class="education-entry__logo" src="/images/northwestern-logo.png" alt="西北大学校徽">
 
 ### 西北大学
 
@@ -24,7 +24,7 @@ redirect_from:
 </div>
 
 <div class="education-entry education-entry--with-logo" markdown="1">
-<img class="education-entry__logo" src="https://rna.umich.edu/wp-content/uploads/2024/07/block_m-hex.png" alt="密歇根大学校徽">
+<img class="education-entry__logo" src="/images/umich-logo.png" alt="密歇根大学校徽">
 
 ### 密歇根大学安娜堡分校
 

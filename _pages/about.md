@@ -13,7 +13,7 @@ I am an incoming PhD student in Industrial Engineering and Management Sciences a
 ## Education
 
 <div class="education-entry education-entry--with-logo" markdown="1">
-<img class="education-entry__logo" src="https://common.northwestern.edu/v8/icons/favicon-180.png" alt="Northwestern University logo">
+<img class="education-entry__logo" src="/images/northwestern-logo.png" alt="Northwestern University logo">
 
 ### Northwestern University
 
@@ -23,7 +23,7 @@ I am an incoming PhD student in Industrial Engineering and Management Sciences a
 </div>
 
 <div class="education-entry education-entry--with-logo" markdown="1">
-<img class="education-entry__logo" src="https://rna.umich.edu/wp-content/uploads/2024/07/block_m-hex.png" alt="University of Michigan logo">
+<img class="education-entry__logo" src="/images/umich-logo.png" alt="University of Michigan logo">
 
 ### University of Michigan, Ann Arbor
 

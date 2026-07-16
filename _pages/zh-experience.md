@@ -10,7 +10,7 @@ author: kaiyan_zh
 ## 工作经历
 
 <div class="experience-entry experience-entry--with-logo">
-<img class="experience-entry__logo" src="https://www.cardopt.com/favicon.ico" alt="杉数科技 logo">
+<img class="experience-entry__logo" src="/images/cardinal-operations-logo.png" alt="杉数科技 logo">
 <h3>算法实习生</h3>
 <p><em>2026 年 6 月 – 至今 · 2 个月</em></p>
 <p><strong>杉数科技（上海）有限公司 · 实习</strong></p>
