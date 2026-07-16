@@ -1,0 +1,13 @@
+main:
+  - title: "Research"
+    url: /research/
+
+  - title: "Experience"
+    url: /experience/
+
+  - title: "Academics"
+    url: /academics/
+
+  - title: "中文"
+    url: /zh/
+    align: right
