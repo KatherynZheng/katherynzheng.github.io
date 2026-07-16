@@ -1,10 +1,14 @@
 {% include base_path %}
+{% assign is_chinese_page = false %}
+{% if page.lang == 'zh-CN' %}
+  {% assign is_chinese_page = true %}
+{% endif %}
 
 {% if site.author.github or site.author.bitbucket or site.atom_feed.hide != true %}
 <div class="page__footer-follow">
   <ul class="social-icons">
     {% if site.data.ui-text[site.locale].follow_label %}
-      <li><strong>{{ site.data.ui-text[site.locale].follow_label }}</strong></li>
+      <li><strong>{% if is_chinese_page %}关注：{% else %}{{ site.data.ui-text[site.locale].follow_label }}{% endif %}</strong></li>
     {% endif %}
     {% if site.author.github %}
       <li><a href="https://github.com/{{ site.author.github }}"><i class="fab fa-github" aria-hidden="true"></i> GitHub</a></li>
@@ -21,19 +25,19 @@
 
 <div class="page__footer-bottom">
   <div class="page__footer-copyright">
-    &copy; {{ site.time | date: '%Y' }} {{ site.name | default: site.title }}, {{ site.data.ui-text[site.locale].powered_by | default: "Powered by" }} <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://github.com/academicpages/academicpages.github.io">AcademicPages</a>, a fork of <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.<br />
-    Site last updated {{ "now" | date: '%Y-%m-%d' }}, <a href="/sitemap/" style="text-transform: uppercase;">{{ site.data.ui-text[site.locale].site_map | default: "Sitemap" }}</a>
+    &copy; {{ site.time | date: '%Y' }} {{ site.name | default: site.title }}, {% if is_chinese_page %}由{% else %}{{ site.data.ui-text[site.locale].powered_by | default: "Powered by" }}{% endif %} <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://github.com/academicpages/academicpages.github.io">AcademicPages</a>, {% if is_chinese_page %}基于{% else %}a fork of{% endif %} <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>。<br />
+    {% if is_chinese_page %}网站最近更新于{% else %}Site last updated{% endif %} {{ "now" | date: '%Y-%m-%d' }}, <a href="/sitemap/" style="text-transform: uppercase;">{% if is_chinese_page %}网站地图{% else %}{{ site.data.ui-text[site.locale].site_map | default: "Sitemap" }}{% endif %}</a>
   </div>
 
   <details class="visitor-details">
-    <summary class="visitor-summary">Global readership</summary>
+    <summary class="visitor-summary">{% if is_chinese_page %}全球读者{% else %}Global readership{% endif %}</summary>
     <div class="visitor-panel">
-      <div class="visitor-title">Readers around the world</div>
-      <div class="visitor-subtitle">Tracked since 2026 · click the map for details</div>
+      <div class="visitor-title">{% if is_chinese_page %}全球读者分布{% else %}Readers around the world{% endif %}</div>
+      <div class="visitor-subtitle">{% if is_chinese_page %}自 2026 年起统计 · 点击地图查看详情{% else %}Tracked since 2026 · click the map for details{% endif %}</div>
       <div class="visitor-widget-shell">
         <script type="text/javascript" id="mapmyvisitors" src="//mapmyvisitors.com/map.js?d=VbXU2wlkgd8GXjOl2mvkzP3yd3XrpX6XhyaGHi3YQ8I&cl=ffffff&w=a"></script>
       </div>
-      <a class="visitor-external" href="https://mapmyvisitors.com/web/1c6lc" target="_blank" rel="noopener">Open interactive map ↗</a>
+      <a class="visitor-external" href="https://mapmyvisitors.com/web/1c6lc" target="_blank" rel="noopener">{% if is_chinese_page %}打开交互地图 ↗{% else %}Open interactive map ↗{% endif %}</a>
     </div>
   </details>
 </div>

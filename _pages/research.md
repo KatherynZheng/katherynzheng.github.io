@@ -1,5 +1,6 @@
 ---
 permalink: /research/
+alternate_url: /zh/research/
 title: "Research"
 author_profile: true
 redirect_from:

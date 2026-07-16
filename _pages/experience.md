@@ -1,5 +1,6 @@
 ---
 permalink: /experience/
+alternate_url: /zh/experience/
 title: "Experience"
 author_profile: true
 redirect_from:

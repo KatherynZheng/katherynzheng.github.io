@@ -1,4 +1,21 @@
 {% include base_path %}
+{% assign is_chinese_page = false %}
+{% if page.url contains '/zh/' %}
+  {% assign is_chinese_page = true %}
+{% endif %}
+{% assign navigation_links = site.data.navigation.main %}
+{% assign home_url = '/' %}
+{% if is_chinese_page %}
+  {% assign navigation_links = site.data.navigation.zh %}
+  {% assign home_url = '/zh/' %}
+{% endif %}
+{% assign language_switch_url = '/zh/' %}
+{% if is_chinese_page %}
+  {% assign language_switch_url = '/' %}
+{% endif %}
+{% if page.alternate_url %}
+  {% assign language_switch_url = page.alternate_url %}
+{% endif %}
 <div class="masthead">
   <div class="masthead__inner-wrap">
     <div class="masthead__menu">
@@ -6,14 +23,14 @@
         <button><span class="navicon"></span></button>
         <ul class="visible-links">
           <li class="masthead__menu-item masthead__menu-item--lg persist {% if page.url == '/' or page.url == '/index.html' %}selected{% endif %}">
-            <a href="{{ base_path }}/">{{ site.title }}</a>
+            <a href="{{ site.baseurl }}{{ home_url }}">{{ site.title }}</a>
           </li>
-          {% for link in site.data.navigation.main %}
+          {% for link in navigation_links %}
             {% unless link.align == 'right' %}
             {% if link.url contains 'http' %}
               {% assign domain = '' %}
             {% else %}
-              {% assign domain = base_path %}
+              {% assign domain = site.baseurl %}
             {% endif %}
             <li class="masthead__menu-item {% if page.url contains link.url and link.url != '/' %}selected{% endif %}">
               <a href="{{ domain }}{{ link.url }}">{{ link.title }}</a>
@@ -22,27 +39,27 @@
           {% endfor %}
         </ul>
         <ul class="masthead-actions">
-          {% for link in site.data.navigation.main %}
+          {% for link in navigation_links %}
             {% if link.align == 'right' %}
               {% if link.url contains 'http' %}
                 {% assign domain = '' %}
               {% else %}
-                {% assign domain = base_path %}
+                {% assign domain = site.baseurl %}
               {% endif %}
               <li class="masthead__menu-item persist {% if page.url contains link.url and link.url != '/' %}selected{% endif %}">
                 <a href="{{ domain }}{{ link.url }}">{{ link.title }}</a>
               </li>
             {% endif %}
           {% endfor %}
-          {% assign is_chinese_page = false %}
-          {% if page.url == '/zh/' %}
-            {% assign is_chinese_page = true %}
-          {% endif %}
           <li class="masthead__menu-item persist language-switch{% if is_chinese_page %} language-switch--zh{% else %} language-switch--en{% endif %}">
-            <a href="{% if is_chinese_page %}{{ site.baseurl }}/{% else %}{{ site.baseurl }}/zh/{% endif %}"
+            <a href="{{ site.baseurl }}{{ language_switch_url }}"
                aria-label="{% if is_chinese_page %}Switch to English{% else %}切换到中文{% endif %}"
                title="{% if is_chinese_page %}Switch to English{% else %}切换到中文{% endif %}">
-              <span lang="zh-CN">中</span><span class="language-switch__divider" aria-hidden="true">/</span><span lang="en">En</span>
+              <span class="language-switch__track" aria-hidden="true">
+                <span class="language-switch__thumb"></span>
+                <span class="language-switch__label language-switch__label--zh" lang="zh-CN">中</span>
+                <span class="language-switch__label language-switch__label--en" lang="en">En</span>
+              </span>
             </a>
           </li>
           <li id="theme-toggle" class="masthead__menu-item persist tail">

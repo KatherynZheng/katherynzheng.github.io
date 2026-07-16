@@ -7,3 +7,13 @@ main:
 
   - title: "Academics"
     url: /academics/
+
+zh:
+  - title: "科研"
+    url: /zh/research/
+
+  - title: "经历"
+    url: /zh/experience/
+
+  - title: "学术"
+    url: /zh/academics/

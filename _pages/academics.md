@@ -1,5 +1,6 @@
 ---
 permalink: /academics/
+alternate_url: /zh/academics/
 title: "Academics"
 author_profile: true
 redirect_from:
