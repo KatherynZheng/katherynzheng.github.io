@@ -282,6 +282,35 @@
       margin-right: 0;
       cursor: pointer;
     }
+
+    .language-switch a {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.18rem;
+      margin: 0 0.65rem 0 0;
+      padding: 0.35rem 0.55rem;
+      border: 1px solid var(--global-border-color);
+      border-radius: 999px;
+      font-size: $type-size-6;
+      line-height: 1;
+      white-space: nowrap;
+
+      &:hover {
+        border-color: var(--global-masthead-link-color-hover);
+        text-decoration: none;
+      }
+    }
+
+    .language-switch__divider {
+      color: var(--global-text-color-light);
+      font-weight: 400;
+    }
+
+    .language-switch--en a [lang="en"],
+    .language-switch--zh a [lang="zh-CN"] {
+      color: var(--global-masthead-link-color-hover);
+      font-weight: 700;
+    }
   }
 
   .hidden-links {

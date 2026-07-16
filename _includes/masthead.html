@@ -34,6 +34,17 @@
               </li>
             {% endif %}
           {% endfor %}
+          {% assign is_chinese_page = false %}
+          {% if page.url == '/zh/' %}
+            {% assign is_chinese_page = true %}
+          {% endif %}
+          <li class="masthead__menu-item persist language-switch{% if is_chinese_page %} language-switch--zh{% else %} language-switch--en{% endif %}">
+            <a href="{% if is_chinese_page %}{{ site.baseurl }}/{% else %}{{ site.baseurl }}/zh/{% endif %}"
+               aria-label="{% if is_chinese_page %}Switch to English{% else %}切换到中文{% endif %}"
+               title="{% if is_chinese_page %}Switch to English{% else %}切换到中文{% endif %}">
+              <span lang="zh-CN">中</span><span class="language-switch__divider" aria-hidden="true">/</span><span lang="en">En</span>
+            </a>
+          </li>
           <li id="theme-toggle" class="masthead__menu-item persist tail">
             <a role="button" aria-labelledby="theme-icon"><i id="theme-icon" class="fa-solid fa-sun" aria-hidden="true" title="toggle theme"></i></a>
           </li>
