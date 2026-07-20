@@ -348,6 +348,10 @@
     }
   }
 
+  .hidden-links .language-switch--mobile {
+    display: none;
+  }
+
   .hidden-links {
     position: absolute;
     top: 100%;
@@ -402,6 +406,77 @@
 
       &:last-child {
         border-bottom: none;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .greedy-nav {
+    .masthead-actions .language-switch--desktop {
+      display: none;
+    }
+
+    .hidden-links {
+      min-width: 12rem;
+
+      .language-switch--mobile {
+        display: block;
+        margin-top: 0.25rem;
+        padding-top: 0.25rem;
+        border-top: 1px solid var(--global-border-color);
+
+        a {
+          display: inline-flex;
+          align-items: center;
+          margin: 0;
+          padding: 0.5rem 20px;
+          font-size: $type-size-5;
+        }
+
+        .language-switch__track {
+          position: relative;
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+          align-items: center;
+          width: 4.15rem;
+          height: 1.65rem;
+          padding: 2px;
+          overflow: hidden;
+          border: 1px solid var(--global-dark-border-color);
+          border-radius: 999px;
+          background: var(--global-border-color);
+        }
+
+        .language-switch__thumb {
+          position: absolute;
+          top: 2px;
+          left: 2px;
+          width: calc(50% - 2px);
+          height: calc(100% - 4px);
+          border-radius: 999px;
+          background: var(--global-bg-color);
+          box-shadow: 0 1px 4px rgba(#000, 0.18);
+          transition: transform 0.22s ease;
+        }
+
+        .language-switch--en .language-switch__thumb {
+          transform: translateX(100%);
+        }
+
+        .language-switch__label {
+          position: relative;
+          z-index: 1;
+          text-align: center;
+          color: var(--global-text-color-light);
+          font-weight: 500;
+        }
+
+        .language-switch--en .language-switch__label--en,
+        .language-switch--zh .language-switch__label--zh {
+          color: var(--global-masthead-link-color);
+          font-weight: 700;
+        }
       }
     }
   }
