@@ -407,56 +407,6 @@
   }
 }
 
-@media screen and (max-width: 768px) {
-  .greedy-nav {
-    padding-right: 0;
-
-    button {
-      display: none !important;
-    }
-
-    .visible-links {
-      display: flex;
-      width: calc(100% - 7rem);
-      flex-wrap: wrap;
-      align-items: center;
-
-      li {
-        display: block;
-      }
-    }
-
-    .hidden-links {
-      position: static;
-      display: flex;
-      visibility: visible;
-      width: calc(100% - 7rem);
-      flex-wrap: wrap;
-      margin: 0;
-      padding: 0;
-      border: 0;
-      background: transparent;
-      box-shadow: none;
-
-      &:before,
-      &:after {
-        display: none;
-      }
-
-      li {
-        display: block;
-      }
-
-      a {
-        margin: 0 1rem;
-        padding: 0.5rem 0;
-        font-size: inherit;
-      }
-    }
-  }
-}
-
-
 /*
    Navigation list
    ========================================================================== */
