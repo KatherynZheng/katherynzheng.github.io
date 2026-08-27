@@ -10,7 +10,8 @@ redirect_from:
 
 ## Awards
 
-- University of Michigan - University Honors (2024)
+- University of Michigan - James B. Angell Scholar (2026)
+- University of Michigan - University Honors (2024 - 2026)
 - CUHK(SZ) Bowen Scholarship (2022-2024)
 - CUHK(SZ) Dean's List (2022-2024)
 - Second Prize, China Undergraduate Mathematical Contest in Modeling (2023)
