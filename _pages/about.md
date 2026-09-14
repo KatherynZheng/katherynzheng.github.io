@@ -8,7 +8,7 @@ redirect_from:
   - /about.html
 ---
 
-I am an incoming PhD student in Industrial Engineering and Management Sciences at Northwestern University. I graduated from the University of Michigan, Ann Arbor in May 2026, where I studied Mathematics, Data Science, and Statistics. My research interests include machine learning and optimization. Prior to UMich, I studied Quantitative Finance at The Chinese University of Hong Kong, Shenzhen.
+I am a PhD student in Industrial Engineering and Management Sciences at Northwestern University. I graduated from the University of Michigan, Ann Arbor in May 2026, where I studied Mathematics, Data Science, and Statistics. My research interests include machine learning and optimization. Prior to UMich, I studied Quantitative Finance at The Chinese University of Hong Kong, Shenzhen.
 
 ## Education
 
