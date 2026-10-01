@@ -12,7 +12,7 @@ repository               : "KatherynZheng/katherynzheng.github.io"
 
 # Only populated fields appear in the Academic Pages author sidebar.
 author:
-  avatar           : "personal_website.png"
+  avatar           : "headshot.jpg"
   name             : "Kaiyan Zheng"
   bio              : "PhD Student | Northwestern University"
   email            : "kaiyan@u.northwestern.edu"
