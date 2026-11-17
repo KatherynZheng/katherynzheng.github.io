@@ -12,7 +12,7 @@ redirect_from:
 <div class="experience-entry experience-entry--with-logo">
 <img class="experience-entry__logo" src="/images/cardinal-operations-logo.png" alt="Cardinal Operations Technology logo">
 <h3>Algorithm Engineer Intern</h3>
-<p><em>Jun 2026 – Present · 2 mos</em></p>
+<p><em>Jun 2026 – Aug 2026 · 3 mos</em></p>
 <p><strong>Cardinal Operations Technology (Shanghai) Co. Ltd. · Internship</strong></p>
 <p>On-site</p>
 <p><strong>Concentration:</strong> AI-augmented Operations Research</p>
